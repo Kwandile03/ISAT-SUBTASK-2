@@ -1,0 +1,49 @@
+   do {
+        displayMenu();
+        cin >> choice;
+
+        switch (choice) {
+
+            case 1: {
+                int decimal;
+
+                cout << "Enter a decimal number: ";
+                cin >> decimal;
+
+                cout << "Binary: "
+                     << decimalToBinary(decimal) << endl;
+
+                break;
+            }
+
+            case 2: {
+                string binary;
+
+                cout << "Enter a binary number: ";
+                cin >> binary;
+
+                cout << "Decimal: "
+                     << binaryToDecimal(binary) << endl;
+
+                break;
+            }
+
+            case 3: {
+                int decimal;
+
+                cout << "Enter a decimal number: ";
+                cin >> decimal;
+
+                cout << "Hexadecimal: "
+                     << decimalToHexadecimal(decimal) << endl;
+
+                break;
+            }
+
+            case 4: {
+                string hexadecimal;
+
+                cout << "Enter a hexadecimal number: ";
+                cin >> hexadecimal;
+
+                int result = hexadecimalToDecimal(hexadecimal);
