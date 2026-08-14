@@ -1,0 +1,16 @@
+               if (result == -1) {
+                    cout << "Invalid hexadecimal number!" << endl;
+                }
+                else {
+                    cout << "Decimal: " << result << endl;
+                }
+
+                break;
+            }
+
+            case 5: {
+                int randomNumber = rand() % 100;
+
+                cout << "\nRandom number: " << randomNumber << endl;
+                cout << "Binary: "
+                     << decimalToBinary(randomNumber) << endl;
