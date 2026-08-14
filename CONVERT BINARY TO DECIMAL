@@ -1,0 +1,42 @@
+int hexadecimalToDecimal(string hexadecimal) {
+    int decimal = 0;
+
+    for (char digit : hexadecimal) {
+        int value;
+
+        if (digit >= '0' && digit <= '9') {
+            value = digit - '0';
+        }
+        else if (digit >= 'A' && digit <= 'F') {
+            value = digit - 'A' + 10;
+        }
+        else if (digit >= 'a' && digit <= 'f') {
+            value = digit - 'a' + 10;
+        }
+        else {
+            return -1;
+        }
+
+        decimal = decimal * 16 + value;
+    }
+
+    return decimal;
+}
+
+// Display menu
+void displayMenu() {
+    cout << "\n===== NUMBER CONVERTER =====" << endl;
+    cout << "1. Convert Decimal to Binary" << endl;
+    cout << "2. Convert Binary to Decimal" << endl;
+    cout << "3. Convert Decimal to Hexadecimal" << endl;
+    cout << "4. Convert Hexadecimal to Decimal" << endl;
+    cout << "5. Demo - Generate Random Number" << endl;
+    cout << "6. Exit" << endl;
+    cout << "Enter your choice: ";
+}
+
+int main() {
+    int choice;
+
+    // Seed random number generator
+    srand(time(0));
